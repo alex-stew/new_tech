@@ -31,11 +31,10 @@ Post.init(
     comment: {
       type: DataTypes.STRING,
       allowNull: true,
-
+      defaultValue: null,
     },
     user_id: {
-      type: DataTypes.UUID,
-      allowNull: false,
+      type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',

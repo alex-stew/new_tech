@@ -1,22 +1,21 @@
-[
-  {
-    "name": "Alex",
-    "email": "alex@email.com",
-    "password": "pw12345"
-  },
-  {
-    "name": "Sam",
-    "email": "smacka@gmail.com",
-    "password": "pw12345"
-  },
-  {
-    "name": "Ricky",
-    "email": "shake@aol.com",
-    "password": "pw12345"
-  },
-  {
-    "name": "Bobby",
-    "email": "bake@aol.com",
-    "password": "pw12345"
-  }
+[{
+        "name": "Alex",
+        "email": "alex@email.com",
+        "password": "pass12345"
+    },
+    {
+        "name": "Sam",
+        "email": "smacka@gmail.com",
+        "password": "pass12345"
+    },
+    {
+        "name": "Ricky",
+        "email": "shake@aol.com",
+        "password": "pass12345"
+    },
+    {
+        "name": "Bobby",
+        "email": "bake@aol.com",
+        "password": "pass12345"
+    }
 ]

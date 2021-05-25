@@ -1,0 +1,33 @@
+body {
+    background-color: #00120B;
+}
+
+.navbarContainer {
+    align-items: center;
+    background-color: #35605a;
+}
+
+#welcomeContainer {
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: #6b818c;
+}
+
+#dashContainer {
+    background-color: #00120B;
+    padding: 25px;
+    text-align: center;
+    color: #31e981;
+}
+
+.postCard {
+    padding: 25px;
+    margin:25px;
+    background-color: #6B818C;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    color: #00120B;
+}
+

@@ -1,12 +1,25 @@
-<!-- Loop over each user object -->
-{{#each users as |user| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <!-- Render user-specific data with Handlebars.js expressions -->
-    <h2>{{{get_emoji}}} {{user.name}}</h2>
+
+{{> nav}}
+
+
+
+<div class="dashboard">
+  <div id="welcomeContainer"class="container-fluid">
+    <h1>New Tech</h1>
+    <h4>by alexstewart</h4>
   </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
+  
+  <div id="dashContainer"class="container-fluid">
+    <h1>Recent Posts</h1>    
+    {{#each posts as |post|}}
+      <div class="postCard">
+        <h2 class="postTitle" data-id={{this.id}}>{{this.title}}
+          <button class="goPost" data-id={{this.id}}>go to post</button>
+        </h2>
+        <p class="postContent" data-id={{this.id}}>{{this.content}}</p>
+        <h3 class="postAuthor">{{user.name}}</h3>
+      </div>
+    {{/each}}
   </div>
+
 </div>
-{{/each}}

@@ -18,7 +18,7 @@ router.post('/', withAuth, async (req, res) => {
         post_id: req.body.post_id,
         user_id: req.session.user_id,
       },
-    });
+    );
     console.log(newComment);
 
     if (!newComment) {

@@ -53,6 +53,6 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
-router.get
+// router.get('./create', withAuth, async )
 
 module.exports = router;

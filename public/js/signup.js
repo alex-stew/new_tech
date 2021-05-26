@@ -10,7 +10,7 @@ async function signupFormHandler(event) {
         alert("please enter a secure password, of at least 8 characters");
         return;
       }
-      const response = await fetch("/api/users/signup", {
+      const response = await fetch("/api/users/", {
         method: "POST",
         body: JSON.stringify({
           name,
@@ -21,9 +21,9 @@ async function signupFormHandler(event) {
       });
       if (response.ok) {
         console.log("password set");
-        document.location.replace("/login");
+        document.location.replace("/");
       } else {
-        alert("this email address is already in use. Please try again.");
+        alert(response.statusText);
       }
     }
 }

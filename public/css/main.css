@@ -2,23 +2,30 @@ html {
     background-color: #00120B;
 }
 
+.navbar-brand {
+    font-weight: bold;
+    color: #31e981;
+}
+
 .navbarContainer {
     align-items: center;
     background-color: #35605a;
 }
 
-#welcomeContainer {
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-    background-color: #6b818c;
+#seePostBtn {
+    max-width: 150px;
 }
 
 #dashContainer {
     background-color: #00120B;
     padding: 25px;
     text-align: center;
+}
+
+#dashContainer > h1 {
     color: #31e981;
+    text-shadow: 5px 5px 20px #FFFFFF;
+    font-size: 52px;
 }
 
 .postCard {
@@ -31,9 +38,35 @@ html {
     color: #00120B;
 }
 
-.login-form {
-    padding: 10px;
+.postCard > button {
+    align-self: center;
+}
 
+.postCard > p {
+    text-align: left;
+    background-opacity: 0.2;
+    border-radius: 20px; 
+}
+
+.postCard > h2 {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+
+.postCard > h3 {
+    text-align: right;
+    font-weight: bold; 
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
 }
 
 .form-group {
@@ -41,12 +74,72 @@ html {
 }
 
 .credContainer {
-    text-align: center;
-    vertical-align: middle;
-    padding-top: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #00120B;
+}
+
+.credContainer > h2 {
+    color: #31e981;
     padding-bottom: 20px;
-    border-radius: 15px;
-    border-color: #00120B;
-    border-width: 3px;
-    background-color: #6B818C;
+    text-align: center;
+}
+
+.credContainer > form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
+#create-post-card > h3{
+    color: #31e981;
+    padding-bottom: 20px;
+}
+
+#create-post-card{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #00120B;
+}
+
+#create-post-form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+#create-post-form > label {
+    margin-top: 10px;
+}
+
+#create-post-form > button {
+   margin: 1rem;
+}
+
+.form > textarea {
+    display: block;
+    padding: 10px;
+    min-width: 80%;
+    max-width:100%;
+    min-height: 1rem;
+    max-height: 100%;
+}
+
+#post-content {
+    width: 
 }

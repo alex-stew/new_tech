@@ -1,23 +1,14 @@
-<div class="dashboard">
-  <div id="welcomeContainer"class="container-fluid">
-    <h4>join the conversation</h4>
-    <h1>NEW TECH</h1>
-    
-    {{#if logged_in}}
-    <h1>Welcome back:</h1>
-    <h4>{{name}}</h4>
-    {{/if}}
-  </div>
-  
+<div class="dashboard">  
   <div id="dashContainer"class="container-fluid">
-    <h1>Posts</h1>    
+    <h1>_recent posts</h1>    
     {{#each posts as |post|}}
       <div class="postCard">
-        <h2 class="postTitle" data-id={{this.id}}>{{this.title}}
-          <button class="goPost" data-id={{this.id}}>go to post</button>
-        </h2>
+        <h2 class="postTitle" data-id={{this.id}}>{{this.title}}</h2>
         <p class="postContent" data-id={{this.id}}>{{this.content}}</p>
         <h3 class="postAuthor">{{user.name}}</h3>
+        
+        <button id="seePostBtn" class="btn btn-primary" data-id={{this.id}}>go to post</button>
+
       </div>
     {{/each}}
   </div>

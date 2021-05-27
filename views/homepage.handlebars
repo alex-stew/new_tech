@@ -7,10 +7,10 @@
         <p class="postContent" data-id={{this.id}}>{{this.content}}</p>
         <h3 class="postAuthor">{{user.name}}</h3>
         
-        <button id="seePostBtn" class="btn btn-primary" data-id={{this.id}}>go to post</button>
+        <a class="nav-link" href="/post/{{this.id}}"><button class="btn btn-primary" type="button">go to post</button></a>
 
       </div>
     {{/each}}
   </div>
-
 </div>
+

@@ -16,22 +16,12 @@ Post.init(
       allowNull: false,
       unique: true,
       validate: {
-        len: [10, 50],
+        len: [2, 50],
       },
     },
     content: {
       type: DataTypes.TEXT,
       allowNull: false,
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    comment: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      defaultValue: null,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -43,7 +33,7 @@ Post.init(
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'post',

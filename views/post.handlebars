@@ -1,11 +1,30 @@
-<div class="userPost">
-    <div id="postCard" class="card">
-        <h1>{{this.title}}</h1>
-        <p>{{this.content}}</p>
-        <h3>{{this.user}}</h3>
+<div class="postCard card">
+    <h1>{{this.title}}</h1>
+    <p>{{this.content}}</p>
+    {{#if (when current_user_id "eq" user_id)}}
+    <div class="container-fluid ownerMenu">
+          <button id="deletePostBtn" data-id="{{id}}" class="btn btn-outline-danger" type="button">delete post</button>
     </div>
-    <form class="comment">
-        <textarea name="commentContent" id=""></textarea>
-        <button class="btn btn-success">click to add a comment</button>
+    {{/if}}
+    <h3>author: {{user.name}}</h3>
+</div>
+
+<br>
+<div class="container-fluid">
+    <h1>comments:</h1>
+    <hr>
+    {{#each comments as |comment|}}
+        <div class="card commentCard">
+            <p>{{comment.content}}</p>
+            <h5>{{user.name}}</h5>
+        </div>
+    {{/each}}
+    <hr>
+    <form class="comment-form">
+        <textarea name="commentText" id="comment-content" placeholder="enter your comment.."></textarea><br>
+        <button id="commentBtn" data-id="{{id}}" class="btn btn-outline-warning" type="submit"> add comment </button>
     </form>
 </div>
+
+<script src="/js/deletePost.js"></script>
+<script src="/js/comment.js"></script>

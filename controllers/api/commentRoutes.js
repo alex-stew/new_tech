@@ -11,11 +11,43 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+  try {
+    const commentData = await Comment.findByPk(req.params.id);
+
+    let comment = commentData.get({ plain: true });
+    console.log(comment);
+
+    res.json(comment);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const removeComment = await Comment.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (!removeComment) {
+      res.status(404).json({ message: "No comment found with this id!" });
+      return;
+    }
+
+    res.status(200).json(removeComment);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const newComment = await Comment.create({
         ...req.body,
-        post_id: req.body.post_id,
         user_id: req.session.user_id,
       },
     );

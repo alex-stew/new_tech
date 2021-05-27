@@ -28,6 +28,29 @@ html {
     font-size: 52px;
 }
 
+.ownerMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.comment-form {
+    display: block;
+    padding: 25px;
+    justify-content: center;
+}
+
+.commentCard {
+    width: 80%;
+    padding: 10px;
+    margin: 8px auto;
+}
+
+.commentCard > h5 {
+    text-align: right;
+    text-decoration: bold;
+}
+
 .postCard {
     padding: 25px;
     margin:25px;

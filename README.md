@@ -1,5 +1,7 @@
 # new_tech
 
+![Screen Shot 2021-05-27 at 6 09 58 pm](https://user-images.githubusercontent.com/69836062/119794574-cd54bb00-bf16-11eb-9785-146ef425022c.png)
+
   ## Table of Contents
   - [Description](#description)
   - [Installation](#installation)
